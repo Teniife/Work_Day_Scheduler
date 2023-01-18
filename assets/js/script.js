@@ -26,22 +26,20 @@ $(function () {
 
         if (hourBlock < presentHour) {
           $(this).addClass('past');
-        } else if (hourBlock === presentHour) {
+        } 
+        else if (hourBlock === presentHour) {
           $(this).removeClass('past');
           $(this).addClass('present');
-        } else {
+        } 
+        else {
           $(this).removeClass('past');
           $(this).removeClass('present');
           $(this).addClass('future');
         }
       });
     }
-  
     hourUpdater();
-  
-   
     setInterval(hourUpdater, 15000);
-  
 
     $('#hour-9 .description').val(localStorage.getItem('hour-9'));
     $('#hour-10 .description').val(localStorage.getItem('hour-10'));
